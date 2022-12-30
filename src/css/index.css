@@ -1,0 +1,156 @@
+@tailwind base;
+
+@layer base {
+  :root {
+    --doc-height: 100%;
+  }
+
+  html,
+  body {
+    height: 100vh;
+    height: var(--doc-height);
+    overflow: hidden;
+  }
+
+  .h-real {
+    height: var(--doc-height);
+  }
+
+  #root {
+    @apply h-full select-none;
+  }
+
+  .shadow-numo {
+    @apply shadow-numo-light hover:shadow-numo-light-hover;
+  }
+
+  .shadow-numo-inset {
+    @apply shadow-numo-light-inset;
+  }
+  .shadow-frame {
+    @apply shadow-frame-light;
+  }
+  .shadow-frame-inner {
+    @apply shadow-frame-inner-light;
+  }
+
+  .shadow-numo-legacy-frame {
+    @apply shadow-numo-legacy-frame-light;
+  }
+
+  .shadow-numo-legacy-frame-inner {
+    @apply shadow-numo-legacy-frame-inner-light;
+  }
+
+  [data-theme="dark"] .shadow-numo,
+  [data-theme="darkpink"] .shadow-numo,
+  [data-theme="darkpurple"] .shadow-numo,
+  [data-theme="synthwave"] .shadow-numo,
+  [data-theme="cyberpunk"] .shadow-numo,
+  [data-theme="halloween"] .shadow-numo,
+  [data-theme="forest"] .shadow-numo,
+  [data-theme="aqua"] .shadow-numo,
+  [data-theme="luxury"] .shadow-numo,
+  [data-theme="dracula"] .shadow-numo,
+  [data-theme="business"] .shadow-numo,
+  [data-theme="night"] .shadow-numo,
+  [data-theme="coffee"] .shadow-numo {
+    @apply shadow-numo-dark hover:shadow-numo-dark-hover;
+  }
+
+  [data-theme="dark"] .shadow-numo-inset,
+  [data-theme="darkpink"] .shadow-numo-inset,
+  [data-theme="darkpurple"] .shadow-numo-inset,
+  [data-theme="synthwave"] .shadow-numo-inset,
+  [data-theme="cyberpunk"] .shadow-numo-inset,
+  [data-theme="halloween"] .shadow-numo-inset,
+  [data-theme="forest"] .shadow-numo-inset,
+  [data-theme="aqua"] .shadow-numo-inset,
+  [data-theme="luxury"] .shadow-numo-inset,
+  [data-theme="dracula"] .shadow-numo-inset,
+  [data-theme="business"] .shadow-numo-inset,
+  [data-theme="night"] .shadow-numo-inset,
+  [data-theme="coffee"] .shadow-numo-inset {
+    @apply shadow-numo-dark-inset;
+  }
+
+  [data-theme="dark"] .shadow-numo-legacy-frame,
+  [data-theme="darkpink"] .shadow-numo-legacy-frame,
+  [data-theme="darkpurple"] .shadow-numo-legacy-frame,
+  [data-theme="synthwave"] .shadow-numo-legacy-frame,
+  [data-theme="cyberpunk"] .shadow-numo-legacy-frame,
+  [data-theme="halloween"] .shadow-numo-legacy-frame,
+  [data-theme="forest"] .shadow-numo-legacy-frame,
+  [data-theme="aqua"] .shadow-numo-legacy-frame,
+  [data-theme="luxury"] .shadow-numo-legacy-frame,
+  [data-theme="dracula"] .shadow-numo-legacy-frame,
+  [data-theme="business"] .shadow-numo-legacy-frame,
+  [data-theme="night"] .shadow-numo-legacy-frame,
+  [data-theme="coffee"] .shadow-numo-legacy-frame {
+    @apply shadow-numo-legacy-frame-dark;
+  }
+
+  [data-theme="dark"] .shadow-numo-legacy-frame-inner,
+  [data-theme="darkpink"] .shadow-numo-legacy-frame-inner,
+  [data-theme="darkpurple"] .shadow-numo-legacy-frame-inner,
+  [data-theme="synthwave"] .shadow-numo-legacy-frame-inner,
+  [data-theme="cyberpunk"] .shadow-numo-legacy-frame-inner,
+  [data-theme="halloween"] .shadow-numo-legacy-frame-inner,
+  [data-theme="forest"] .shadow-numo-legacy-frame-inner,
+  [data-theme="aqua"] .shadow-numo-legacy-frame-inner,
+  [data-theme="luxury"] .shadow-numo-legacy-frame-inner,
+  [data-theme="dracula"] .shadow-numo-legacy-frame-inner,
+  [data-theme="business"] .shadow-numo-legacy-frame-inner,
+  [data-theme="night"] .shadow-numo-legacy-frame-inner,
+  [data-theme="coffee"] .shadow-numo-legacy-frame-inner {
+    @apply shadow-numo-legacy-frame-inner-dark;
+  }
+
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply shadow-inner shadow-base-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply transition-colors bg-base-300 hover:bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-base-100;
+  }
+
+  /* Loader */
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid hsl(var(--p));
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Product Sans;
+  src: url(../font/ProductSans-Bold.ttf) format("ttf");
+  src: url(../font/ProductSans-Bold.woff) format("woff");
+}
